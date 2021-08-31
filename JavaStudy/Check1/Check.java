@@ -15,15 +15,16 @@ public class Check{
       }
       System.out.println();
       for (int i = 0; i < data.length - 1; i++) {
-        //外側のループは右端にくる大きな数字を確定させていくループ
+        //外側のループは左端にくる小さな数字を確定させていくループ
         //ループ変数iは0,1,2,3 = ４回ループが繰り返される
+        //配列の要素数−１回のループが必要
           for (int j = data.length - 1; j > i; j--) {
-            //
+            //隣り合う要素を比較
               /*
               * 問3
               * 以下、配列の添字を入れてソートを完成させなさい
               */
-              if(data[j-1] > data[j]){
+              if(data[j-1] > data[j]){  //隣り合う要素の大小判定
                 int box = data[j];
                 data[j] = data[j-1];
                 data[j-1] = box;
