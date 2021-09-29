@@ -1,5 +1,7 @@
 package study;
 
+//①FruitsConstants.javaをインポートしなさい。
+import constants.FruitsConstants;
 //②Fruits.javaをインポートしなさい。
 import fruits.Fruits;
 /**
@@ -9,7 +11,7 @@ import fruits.Fruits;
  * 全て回答し、課題にある画像と同じ表示になるようにしてください。
  *
  */
-public class Study extends Fruits {
+public class Study  {
 
     public static void main(String[] args) {
 
@@ -17,8 +19,8 @@ public class Study extends Fruits {
          *     また、課題の画像と同じ表示になるように
          *     printFruitsの引数にはFruitsConstantsに指定されている定数を設定してください。
          */
-        Fruits info = new Fruits();
-        info.printFruits("レモン",20);
+        //Fruits info = new Fruits();
+        Fruits.printFruits(FruitsConstants.FRUITS_LEMON_04,FruitsConstants.FRUITS_COUNT_20);
                 
     }
 }
