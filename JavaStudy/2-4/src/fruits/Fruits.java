@@ -1,8 +1,6 @@
 package fruits;
 
-import constants.FruitsConstants;
-
-public class Fruits extends FruitsConstants {
+public class Fruits  {
 
     public static void printFruits(String fruits, int count) {
         System.out.println("食べ物は" + fruits);
