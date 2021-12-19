@@ -1,3 +1,5 @@
+package check;
+
 public class Pet {
 
     private String name;
