@@ -1,23 +1,25 @@
 package check;
 
-import java.awt.Robot;
-
-import check.*;
+import constanta.Constants;
 
 public class Check {
     
-    private String firstName;
-    private String lastName;
-    firstName = "冨永";
-    lastName = "遼太";
-    
-
-    public static void main(String[] args) {
-        // TODO 自動生成されたメソッド・スタブ
-       private static void printName(String first , String last) {
-           System.out.println("printNameメソッド → ");
+    private static String firstName="遼太";
+    private static String lastName="冨永";
+    private static void printName(String last, String first) {
+       String fullNmame = last + first;
+       //System.out.println("printNameメソッド → "+ fullNmame);
        }
-       RobotPet robot = new  RobotPet(firstName, firstName);
+public static void main(String[] args) {
+    // TODO 自動生成されたメソッド・スタブ,
+    
+       Check check = new Check();
+       check.printName(firstName, firstName);
+       
+       Pet pet = new Pet(Constants.CHECK_CLASS_JAVA, Constants.CHECK_CLASS_HOGE);
+       pet.introduce();
+       
+       RobotPet robot = new  RobotPet(Constants.CHECK_CLASS_R2D2, Constants.CHECK_CLASS_LUKE);
        robot.introduce();
        }
 }
