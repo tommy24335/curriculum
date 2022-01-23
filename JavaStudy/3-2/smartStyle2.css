@@ -1,11 +1,4 @@
-@media screen and (min-width: 767px) {
-  .contents {
-    float: none; /* 要素の浮動化の解除 */
-    }
-
-  .wrapper{
-  width: 1000px;
-  }
+@media screen and (max-width: 767px) {
 
   .header {
     width: 300px;
@@ -34,13 +27,6 @@
 }
 
 @media screen and (max-width: 479px) {
-  .contents {
-    float: none; /* 要素の浮動化の解除 */
-    }
-
-  .wrapper{
-  width: 1000px;
-  }
 
   .header {
     width: 150px;
@@ -48,10 +34,12 @@
 
   .left {
     width: 150px;
+    float: none;
   }
 
   .right2 {
     width: 150px;
+    float: none;
   }
 
   .pink {
