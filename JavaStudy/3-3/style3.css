@@ -1,0 +1,153 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.header {
+  width: 400px;
+  height: 100px;
+  background-color: #141f40;
+  position: relative;
+}
+
+.main {
+  position: relative;
+}
+
+.white-box {
+  width: 160px;
+  height: 60px;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  left: 220px;
+  display: flex;
+  position: relative;
+}
+
+.left-box {
+  width: 40px;
+  height: 40px;
+  background-color: #a9004d;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.center-box {
+  width: 40px;
+  height: 40px;
+  background-color: #a9004d;
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+
+.right-box {
+  width: 40px;
+  height: 40px;
+  background-color: #a9004d;
+  position: absolute;
+  top: 10px;
+  left: 110px;
+}
+
+.three-box {
+  position: absolute;
+  top: 40px;
+  left: 190px;
+}
+
+.upper-box {
+  background-color: #ff863f;
+  box-sizing: border-box;
+  width: 140px;
+  height: 50px;
+  border: solid 5px white;
+  margin: 5px;
+}
+
+.middle-box {
+  background-color: #ff863f;
+  box-sizing: border-box;
+  width: 140px;
+  height: 50px;
+  border: solid 5px white;
+  margin: 5px;
+}
+
+.lower-box {
+  background-color: #ff863f;
+  box-sizing: border-box;
+  width: 140px;
+  height: 50px;
+  border: solid 5px white;
+  margin: 5px;
+}
+
+.main {
+  display: flex;
+}
+
+.left {
+  width: 150px;
+  height: 250px;
+  background-color: #80bfa8;
+}
+
+.right {
+  width: 250px;
+  height: 250px;
+  background-color: #8c2727;
+}
+
+.footer {
+  width: 400px;
+  height: 100px;
+  background-color: #d98d30;
+}
+

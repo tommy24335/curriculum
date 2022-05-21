@@ -8,7 +8,7 @@ public class Check {
     private static String lastName="冨永";
     private static void printName(String last, String first) {
        String fullNmame = last + first;
-       //System.out.println("printNameメソッド → "+ fullNmame);
+       System.out.println("printNameメソッド → "+ fullNmame);
        }
 public static void main(String[] args) {
     // TODO 自動生成されたメソッド・スタブ,
