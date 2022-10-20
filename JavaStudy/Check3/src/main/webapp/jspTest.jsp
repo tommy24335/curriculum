@@ -4,13 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/style.css">
 <title>Insert title here</title>
 <%@ include file = "header.jsp" %>
-<%@ include file = "footer.jsp" %>
+
 </head>
 <body>
 
 <!-- name、idの入力エリアを作成しなさい -->
-
+<div class = "name">
+  <label for = "name">name</label>
+  <input type = "text"><br>
+  <label class = "id">id</label>
+  <input type = "text" class = "id-form">
+</div>
+<%@ include file = "footer.jsp" %>
 </body>
 </html>
