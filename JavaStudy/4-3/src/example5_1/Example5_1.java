@@ -1,3 +1,5 @@
+package example5_1;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -66,3 +68,4 @@ public class Example5_1 {
         }
     }
 }
+ 
