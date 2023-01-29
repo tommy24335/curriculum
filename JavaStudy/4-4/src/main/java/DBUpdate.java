@@ -46,7 +46,7 @@ public class DBUpdate {
             statement = connection.createStatement();
 
             // 問⑤ SHOHIN_IDが020のSHOHIN_NAMEを「商品20」に変更するためのSQL文を記述しましょう。
-            String SQL = "SELECT * FROM TB_SHOHIN WHERE SHOHIN_ID = ? OR SHOHIN_ID = ? ";
+            String SQL = "UPDATE TB_SHOHIN SET SHOHIN_NAME = '商品20' WHERE SHOHIN_ID = '020'";
 
             // 問⑥ 上記のSQL文を実行するための文を記述しましょう。
 

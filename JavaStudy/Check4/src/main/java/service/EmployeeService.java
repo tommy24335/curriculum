@@ -31,7 +31,7 @@ public class EmployeeService {
  
   // 問② 入力された値で、UPDATEする文
  /** ・SQL UPDATE文 */
- private static final String SQL_UPDATE = "update employee_table set id = '?' password = '?' name = '?' comment = '?' login_time = '?'";
+ private static final String SQL_UPDATE = "update employee_table set login_time = '?' where id = '?'";
  
   // 問③ 入力されたIDとPassWordをキーにして、検索するSELECT文
  /** ・SQL SELECT文 */
@@ -90,9 +90,9 @@ public class EmployeeService {
  
   // 問⑧ EmployeeBeanに取得したデータを入れてください。
  employeeDate = new EmployeeBean();
- employeeDate.setName("tmpName");
- employeeDate.setComment("tmpComment");
- employeeDate.setLogin_Time("tmpLoginTime");
+ employeeDate.setName(tmpName);
+ employeeDate.setComment(tmpComment);
+ employeeDate.setLogin_Time(tmpLoginTime);
  }
  
   // forName()で例外発生
