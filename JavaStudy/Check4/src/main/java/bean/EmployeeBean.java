@@ -20,10 +20,10 @@ public class EmployeeBean {
     public String getPassWord() {
         return PassWord;
     }
-    public void setName(String Name) {
+    public void setName(String Name) { //引数としてString Nameを受け取ってthis.Nameに代入。private String Name;に対して値を設定
         this.Name = Name;
     }
-    public String getName() {
+    public String getName() { //呼び出し元にNameをかえす
         return Name;
     }
     public void setLogin_Time(String Login_Time) {

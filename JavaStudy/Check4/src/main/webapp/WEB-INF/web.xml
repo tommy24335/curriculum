@@ -2,14 +2,16 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>Check4</display-name>
  <servlet>
- <servlet-name>search</servlet-name>
- <servlet-class>controller.EmployeeController</servlet-class>
+ <servlet-name>search</servlet-name> <!-- サーブレットに任意の名前を付ける -->
+ <servlet-class>controller.EmployeeController</servlet-class> <!-- URL設定対象のクラス（サーブレット）を指定 -->
  </servlet>
- <servlet-mapping>
+ <servlet-mapping> <!--サーブレットネームを指定してURLと結びつける  -->
  <servlet-name>search</servlet-name>
- <url-pattern>/search</url-pattern>
+ <url-pattern>/search</url-pattern> <!-- 指定したサーブレットにURLを設定 -->
  </servlet-mapping>
  <welcome-file-list>
  <welcome-file>index.html</welcome-file>
  </welcome-file-list>
-</web-app>
+</web-app> 
+
+<!--Webアプリケーションを動かすために関係する環境（サーブレット、HTMLファイルなど）を設定するためのファイル  -->
