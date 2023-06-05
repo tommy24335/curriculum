@@ -10,7 +10,6 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -23,9 +22,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import sun.jvm.hotspot.debugger.cdbg.EnumType;
+
 //実行時に宣言した各フィールド変数がカラムとして作成される
 //問１－１ DB設計に必要なアノテーションを記述
-@Controller
+@Entity
 @Table(name="accounts")
 public class Account implements UserDetails {
 
@@ -35,7 +36,7 @@ public class Account implements UserDetails {
 	public enum Authority {ROLE_USER, ROLE_MANAGER, ROLE_ADMIN}
 
 	//問１－２ プライマリーキーを設定するアノテーションを記述
-    @
+    @Id
 	@Column(nullable = false, unique = true)
 	private String username;
 

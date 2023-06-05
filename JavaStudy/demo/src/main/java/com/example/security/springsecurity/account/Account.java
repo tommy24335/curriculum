@@ -1,6 +1,6 @@
-package com.example.security.springsecurity.account_;
+package com.example.security.springsecurity.account;
 
-public class AccountService {
+public class Account {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ

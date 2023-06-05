@@ -9,44 +9,44 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.example.security.springsecurity.account.AccountService;
+import com.example.security.springsecurity.account_.AccountService;
 
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private AccountService userService;
+	@Autowired
+	private AccountService userService;
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-        .authorizeRequests()
-        .antMatchers("/login", "/login-error").permitAll()
-        .antMatchers("/**").hasRole("USER")
-        .and()
-        .formLogin()
-        .loginPage("/login").failureUrl("/login-error");
-    }
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http
+		.authorizeRequests()
+		.antMatchers("/login", "/login-error").permitAll()
+		.antMatchers("/**").hasRole("USER")
+		.and()
+		.formLogin()
+		.loginPage("/login").failureUrl("/login-error");
+	}
 
 
-    //変更点 ロード時に、「admin」ユーザを登録する。
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-        .userDetailsService(userService)
-        .passwordEncoder(passwordEncoder());
+	//変更点 ロード時に、「admin」ユーザを登録する。
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth
+		.userDetailsService(userService)
+		.passwordEncoder(passwordEncoder());
 
-        if (userService.findAllList().isEmpty()) {
-            userService.registerAdmin("admin", "secret", "admin@localhost");
-            userService.registerManager("manager", "secret", "manager@localhost");
-            userService.registerUser("user", "secret", "user@localhost");
-        }
-    }
-    //変更点 PasswordEncoder(BCryptPasswordEncoder)メソッド
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        //
-        return new BCryptPasswordEncoder();
-    }
+		if (userService.findAllList().isEmpty()) {
+			userService.registerAdmin("admin", "secret", "admin@localhost");
+			userService.registerManager("manager", "secret", "manager@localhost");
+			userService.registerUser("user", "secret", "user@localhost");
+		}
+	}
+	//変更点 PasswordEncoder(BCryptPasswordEncoder)メソッド
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		//
+		return new BCryptPasswordEncoder();
+	}
 
 }
