@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+<link th:href="@{/css/layout.css}" rel="stylesheet" />
+<title>マイページ変更・確認画面</title>
+</head>
+<body>
+	<!-- ヘッダー -->
+
+	<header th:include="layout/header :: head">
+		
+
+	</header>
+
+	<!-- サイドバー -->
+	<aside th:include="layout/aside :: side"></aside>
+	<!-- メイン -->
+	<article class="mypage">
+		<form action="" th:action="@{/mypage}" th:field="${userUpdate}"
+			method="post">
+			<h3 class="page_title">マイページ変更・確認画面</h3>
+
+
+			<table class="table employee">
+
+				<tr th:each="userInfo : ${userInfo}" th:object="${userInfo}">
+				<tr>
+					<th class="cell_title">社員番号</th>
+					<td th:text="*{userInfo.empId}"></td>
+				</tr>
+				<tr>
+					<th class="cell_title">名前</th>
+					<td><input type="text" name="empName"
+						th:value="${userInfo.empName}" /></td>
+
+				</tr>
+				<tr>
+					<th class="cell_title">パスワード</th>
+					<td><input type="password" name="password"
+						th:value="${userInfo.password}" /></td>
+
+				</tr>
+				<tr>
+					<th class="cell_title">生年月日</th>
+					<td><input type="text" name="birthday"
+					th:value="${#dates.format(userInfo.birthday,'yyyy-MM-dd')}" /></td>
+
+				</tr>
+				<tr>
+					<th class="cell_title">性別</th>
+					<td><input type="radio" name="gender"
+						th:value="${userInfo.gender}"
+						th:switch="*{userInfo.gender == 1}"
+						th:checked="${userInfo.gender == 1}" /> 男 <input type="radio"
+						name="gender" th:switch="*{userInfo.gender == 2}"
+						th:checked="${userInfo.gender == 2}"> 女</td>
+
+
+				</tr>
+			</table>
+			<div class="btn_area_center">
+				<input type="submit" value="変更確定" class="btn">
+			</div>
+
+
+
+
+		</form>
+	</article>
+	<!-- フッダー -->
+	<footer th:include="layout/footer :: foot"></footer>
+
+</body>
+</html>

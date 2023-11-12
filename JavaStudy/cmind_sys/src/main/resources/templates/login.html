@@ -12,13 +12,15 @@
 	<div class="content">
 		<div class="login">
 			<h3>ログイン画面</h3>
+			<p th:if="${ValidationError}" th:each="${error : ${validationError}">　<!--ログインエラーの際はエラーメッセージを表示する　-->
+			<p  th:text = "${error}"></p>>
 			<div class="form">
 
-				<form th:action="@{/top}" method="post" th:object="${loginForm}">
+				<form th:action="@{/top}" th:method="post" th:object="${loginForm}">
 
 					<div class="login_label">社員番号</div>
 					<div class="login_input">
-						<input type="text" th:field="*{empId}" />
+						<input type="text" th:field="*{empId}"/>
 					</div>
 
 					<div class="login_label">パスワード</div>
